@@ -1,0 +1,20 @@
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; /* Ensure consistency */
+  height: 100vh;
+  gap: 20px; /* Adds spacing between elements */
+  padding: 20px; /* Optional: Adds consistent padding */
+}
+
+.buttons {
+  display: flex;
+  gap: 20px;
+}
+
+.button {
+  padding: 10px 20px;
+  font-size: 16px;
+}

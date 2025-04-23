@@ -1,0 +1,125 @@
+.formGroup {
+  margin-top: 15px; /* Add spacing between sections */
+}
+
+
+.formRow {
+  display: grid;
+  grid-template-columns: 250px 1fr; /* Label: 150px, Input: remaining space */
+  align-items: center; /* Center-align items vertically */
+  gap: 10px; /* Space between label and input */
+  margin-bottom: 15px; /* Space between rows */
+}
+
+.label {
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.input {
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 100%; /* Ensure it spans the available space */
+  box-sizing: border-box; /* Includes padding and border in the width */
+}
+
+.buttons {
+  display: flex;
+  flex-direction: column; /* Stack buttons vertically */
+  align-items: center; /* Center buttons horizontally */
+  gap: 20px; /* Space between buttons */
+}
+
+.button {
+  width: 200px; /* Fixed width for all buttons */
+  height: 50px; /* Fixed height for all buttons */
+  font-size: 16px; /* Text size */
+  background-color: #0070f3; /* Button background color */
+  color: white; /* Button text color */
+  border: none; /* Remove default border */
+  border-radius: 5px; /* Rounded corners */
+  text-align: center; /* Center text horizontally */
+  line-height: 50px; /* Align text vertically */
+  cursor: pointer; /* Pointer cursor on hover */
+  transition: background-color 0.3s ease; /* Smooth hover effect */
+  white-space: nowrap; /* Prevent text wrapping */
+  overflow: hidden; /* Ensure long text doesn't overflow */
+  text-overflow: ellipsis; /* Show "..." for overflowing text */
+}
+
+
+.fullWidthButton{
+  width: 200px; /* Fixed width for all buttons */
+  height: 50px; /* Fixed height for all buttons */
+  font-size: 16px; /* Text size */
+  background-color: #0070f3; /* Button background color */
+  color: white; /* Button text color */
+  border: none; /* Remove default border */
+  border-radius: 5px; /* Rounded corners */
+  text-align: center; /* Center text horizontally */
+  line-height: 50px; /* Align text vertically */
+  cursor: pointer; /* Pointer cursor on hover */
+  transition: background-color 0.3s ease; /* Smooth hover effect */
+  white-space: nowrap; /* Prevent text wrapping */
+  overflow: hidden; /* Ensure long text doesn't overflow */
+  grid-column: 2/5; /* Occupies the full width of the grid container */
+
+}
+
+
+.button:hover {
+  background-color: #005bb5; /* Darker blue on hover */
+}
+
+.dropdown {
+  padding: 10px; /* Space inside the dropdown */
+  font-size: 16px; /* Dropdown text size */
+  border: 1px solid #ccc; /* Light gray border */
+  border-radius: 5px; /* Rounded corners */
+  background-color: white; /* White background */
+  width: 220px; /* Set a fixed width */
+  cursor: pointer; /* Pointer cursor on hover */
+}
+
+.backButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px; /* Space below the back button */
+  padding: 5px 10px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.backButton:hover {
+  background-color: #e0e0e0;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 500px;
+  margin-bottom: 20px;
+  font-size: 14px;
+}
+.textarea {
+  width: 100%; /* Ensure it spans the full width of the container */
+  min-height: 6em; /* Roughly 4 lines of text */
+  resize: vertical; /* Allow only vertical resizing */
+  padding: 10px; /* Add some padding for better readability */
+  font-size: 1rem; /* Ensure consistent font size */
+  border: 1px solid #ccc; /* Add a border for visual clarity */
+  border-radius: 4px; /* Optional: Slightly rounded corners */
+  box-sizing: border-box; /* Include padding in the element's total width/height */
+}
+
+.checkboxRow {
+  display: grid;
+  grid-template-columns: auto 1fr; /* Checkbox takes auto width, label takes remaining space */
+  align-items: center; /* Vertically align the checkbox and label */
+  gap: 10px; /* Space between the checkbox and label */
+  margin-bottom: 15px; /* Consistent spacing with other rows */
+}

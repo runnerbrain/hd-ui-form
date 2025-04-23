@@ -1,0 +1,20 @@
+.fullWidthRow {
+    grid-column: 1 / -1; /* Span across all columns in the grid */
+    width: 100%; /* Ensure the button spans the entire available width */
+  }
+  
+  .fullWidthButton {
+    padding: 10px;
+    font-size: 1rem;
+    text-align: center;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .fullWidthButton:hover {
+    background-color: #0056b3;
+  }
+  
