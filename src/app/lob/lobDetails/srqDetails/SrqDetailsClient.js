@@ -103,14 +103,40 @@ export default function srqDetails() {
           {label: 'Issue retrieving study', subform: 'ptDetails'},
           {label: 'Server down', subform: null}]
       };
+
+      const staffOptions = {
+        srqPACS: [
+            {label: 'Training', subform: 'userDetails'},
+            {label: 'Cannot login', subform: 'userDetails'},
+            {label: 'Patient demographics issue', subform: 'ptDetails'}
+        ],
+      }
     
 
-  const getOptions = () => {
-    const options = role === 'Radiologist' ? radOptions : techOptions;
+//   const getOptions = () => {
+//     const options = role === 'Radiologist' ? radOptions : techOptions;
+//     const key = `${ticketType}${selectedLOB}`; // E.g., "incPACS"
+//     return options[key] || [];
+//   };
+
+
+const getOptions = () => {
+    let options;
+  
+    if (role === 'Radiologist') {
+      options = radOptions;
+    } else if (role === 'Technologist') {
+      options = techOptions;
+    } else if (role === 'Staff') {
+      options = staffOptions;
+    } else {
+      options = {};
+    }
+  
     const key = `${ticketType}${selectedLOB}`; // E.g., "incPACS"
     return options[key] || [];
   };
-
+  
   const handleOptionChange = (e) => {
     const selectedLabel = e.target.value;
 
