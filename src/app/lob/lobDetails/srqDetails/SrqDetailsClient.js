@@ -69,19 +69,25 @@ export default function srqDetails() {
       };
     
       const techOptions = {
+        srqHardware: [
+          {label: 'PACS Scan Web', subform: 'wsDetails'},
+          {label: 'Modality', subform: 'modalityDetails'},
+          {label: 'Other', subform: 'wsDetails'}
+        ],
         srqPACS: [
           {label: 'QC', subform: 'ptDetails'},
           {label: 'Patient demographics issue', subform: 'ptDetails'},
           {lable: 'Other', subform: null}
         ],
         srqVitrea: [
-     
           {label: 'Cannot login', subform: 'userDetails'},
-       
+          {label: 'Other', subform: null}
+        ],
+        srqTeraRecon: [
+          {label: 'Cannot login', subform: 'userDetails'},
           {label: 'Other', subform: null}
         ],
         srqCircle: [
-        
           {label: 'Cannot login', subform: 'userDetails'},
           {label: 'Study not found', subform: 'ptDetails'},
           {label: 'Issue sending to PACS', subform: 'modalityDetails'},
@@ -105,19 +111,26 @@ export default function srqDetails() {
       };
 
       const staffOptions = {
-        srqPACS: [
-            {label: 'Training', subform: 'userDetails'},
-            {label: 'Cannot login', subform: 'userDetails'},
-            {label: 'Patient demographics issue', subform: 'ptDetails'}
+        srqPACS: [       
+          {label: 'Move Images', subform: 'ptDetails'},
+          {label: 'Delete Images', subform: 'ptDetails'},
+          {label: 'Training', subform: 'userDetails'},
+          {label: 'Cannot login', subform: 'userDetails'},
+          {label: 'Patient demographics issue', subform: 'ptDetails'},
+          {label: 'Study Assigned to RAD', subform: 'ptDetails'},
+          {label: 'Other', subform: null}
         ],
+        srqFFI: [
+            {label: 'Cannot report error', subform: 'wsDetails'},
+            {label: 'Other', subform: 'ptDetails'},
+          ],
+          incPathology: [
+                {label: 'Need Account', subform: 'userDetails'},
+                {label: 'Images display issue', subform: 'ptDetails'},
+                {label: 'Other', subform: null}
+          ]
+        
       }
-    
-
-//   const getOptions = () => {
-//     const options = role === 'Radiologist' ? radOptions : techOptions;
-//     const key = `${ticketType}${selectedLOB}`; // E.g., "incPACS"
-//     return options[key] || [];
-//   };
 
 
 const getOptions = () => {

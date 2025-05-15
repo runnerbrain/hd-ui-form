@@ -18,25 +18,31 @@ export default function LineOfBusiness() {
   const lobOptionsByRole = {
   Radiologist:
   [
+    'Hardware',
     'PACS',
     'FFI',
+    'MIM',
     'Vitrea',
+    'TeraRecon',
     'Circle',
+    'OneView',
     'Rapid',
     'Cerner',
-    'MIM',
     'Pathology',
-    'MRI Backup',
+    'MRI-Backup',
     'Other'
   ],
-  Technologist: ['PACS',
+  Technologist: [
+    'Hardware',
+    'PACS',
+    'MIM',
     'Vitrea',
+    'TeraRecon',
     'Circle',
     'Rapid',
     'Cerner',
-    'MIM',
     'Pathology',
-    'MRI Backup',
+    'MRI-Backup',
     'Other'],
   Staff: ['PACS','Cerner', 'Pathology','Other']
 }

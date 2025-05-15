@@ -19,7 +19,7 @@ export default function Home() {
     <div className={styles.container}>
       <h1>Please select your role:</h1>
       <div className={commonStyles.buttons}>
-        <button className={commonStyles.button} onClick={() => handleRoleSelection('Radiologist')}>Radiologist</button>
+        <button className={commonStyles.button} onClick={() => handleRoleSelection('Radiologist')}>Radiologist/Physician</button>
         <button className={commonStyles.button} onClick={() => handleRoleSelection('Technologist')}>Technologist</button>
         <button className={commonStyles.button} onClick={() => handleRoleSelection('Staff')}>Staff</button>
       </div>

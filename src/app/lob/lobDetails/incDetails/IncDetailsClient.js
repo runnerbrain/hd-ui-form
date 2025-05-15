@@ -41,21 +41,31 @@ export default function IncDetails() {
 
   const radOptions = {
 
+    incHardware: [
+      {label: 'Workstation', subform: 'wsDetails'},
+      {label: 'Barco Monitor',subform: 'wsDetails'},
+      {label: 'Eizo Monitor',subform: 'wsDetails'},
+      {label: 'Speech Mic',subform: 'wsDetails'},
+      {label: 'Other',subform: 'wsDetails'}
+    ],
     incPACS: [
       {label: 'Slowness', subform: 'ptDetails'},
       {label: 'Images Not Loading',subform: 'ptDetails'},
       {label: 'Previous Not Loading',subform: 'ptDetails'},
       {label: 'Study Not Falling Off List',subform: 'ptDetails'},
       {label: 'Hanging Protocol Issue',subform: 'null'},
-      {label: 'Hardware',subform: 'wsDetails'},
       {label: 'Other',subform: 'null'}
-    
     ],
       incFFI: [
         {label: 'Cannot start report', subform: 'ptDetails'},
+        {label: 'Study not found', subform: 'ptDetails'},
         {label: 'Study locked', subform: 'ptDetails'},
+        {label: 'Patient-Images mismatch', subform: 'ptDetails'},
         {label: 'Need to cancel report', subform: 'ptDetails'},
-        {label: 'Other', subform: null}
+        {label: 'Study mis-assigned', subform: 'ptDetails'},
+        {label: 'Login issue', subform: 'userDetails'},
+        {label: 'Password reset', subform: 'userDetails'},
+        {label: 'Other', subform: 'userDetails'}
       ],
       incVitrea: [
         {label: 'Slowness', subform: 'wsDetails'},
@@ -64,13 +74,20 @@ export default function IncDetails() {
         {label: 'Study not found', subform: null},
         {label: 'Other', subform: null},
       ],
-        incCircle: [
+      incCircle: [
           {label: 'Slowness', subform: 'ptDetails'}, 
           {label : 'Cannot login', subform: null},
           {label: 'Study not found', subform: null},
           {label: 'Issue sending to PACS', subform: 'wsDetails'},
           {label : 'Issue retrieving from PACS', subform: 'wsDetails'},
           {label: 'Other', subform: null}
+        ],
+        incOneView: [
+          {label: 'Issue Retrieving study to PACS',subform: 'ptDetails'},
+          {label : 'Patient information error', subform: 'ptDetails'},
+          {label: 'OneView not launching in PACS', subform: 'wsDetails'},
+          {label: 'Login issue', subform: 'userDetails'},
+          {label: 'Other', subform: 'userDetails'}
         ],
         incMIM: [
           {label: 'Slowness', subform: 'ptDetails'}, 
@@ -84,6 +101,12 @@ export default function IncDetails() {
           {label: 'Rapid down', subform: null},
           {label: 'Other', subform: null},
         ],
+        incTeraRecon:[
+          {label: 'Image display issue', subform: 'ptDetails'},
+          {label: 'missing Series', subform: 'ptDetails'},
+          {label: 'Hanging Protocol issue', subform: 'userDetails'},
+          {label: 'Other', subform: ''}
+        ],
         incPathology: [
           {label: 'Case not found', subform: 'ptDetails'},
           {label: 'System down', subform: null},
@@ -91,6 +114,7 @@ export default function IncDetails() {
         ],
         incCerner: [
           {label: 'Cannot launch from PACS', subform: 'wsDetails'},
+          {label: 'Studty not Completed', subform: 'ptDetails'},          
           {label: 'Other', subform: null},
         ],
         incMRIBackup: [
@@ -101,10 +125,12 @@ export default function IncDetails() {
     
       const techOptions = {
         incPACS: [
+          {label: 'Cannot assign study', subform: 'ptDetails'},
+          {label: 'Cannot Complete study', subform: 'ptDetails'},
+          {label: 'PACS sending issue', subform: 'modalityDetails'},
+          {label: 'Cannot perform QC', subform: 'ptDetails'},
+          {label: 'Modality Worklist', subform: 'modalityDetails'},
           {label: 'Slowness', subform: 'ptDetails'},
-          {label: 'PACS sending', subform: 'modalityDetails'},
-          {label: 'MWL', subform: 'modalityDetails'},
-          {label: 'QC', subform: 'ptDetails'},
           {label: 'Patient demographics issue', subform: 'ptDetails'},
           {lable: 'Other', subform: null}
         ],
@@ -135,29 +161,19 @@ export default function IncDetails() {
           {label: 'Results not found', subform: 'ptDetails'},
           {label: 'Issues sending to PACS', subform: 'modalityDetails'},
           {label: 'Rapid down', subform: null}],
-        incMRIBckp: [
+          incPathology: [
+            {label: 'Fail Send to Pathology Server', subform: 'ptDetails'},
+            {label: 'Other', subform: null},
+          ],
+        incMRI_Backup: [
           {label: 'Study not found', subform: ['modalityDetails','ptDetails']},
           {label: 'Study not saving', subform: ['modalityDetails','ptDetails']},          
           {label: 'Issue retrieving study', subform: 'ptDetails'},
-          {label: 'Server down', subform: null}]
-      };
-
-      const staffOptions = {
-        incPACS: [
-          {label: '', subform: ''},
-          {label: '', subform: ''},
-          {label: '', subform: ''}
-        ],
+          {label: 'Server down', subform: null}],
         incCerner: [
-          {label: '', subform: ''},
-          {label: '', subform: ''},
-          {label: '', subform: ''}
-        ],
-        incPathology: [
-          {label: '', subform: ''},
-          {label: '', subform: ''},
-          {label: '', subform: ''}
-        ]
+          {label: 'Other', subform: null},
+          ],
+      }
       }
     
 
