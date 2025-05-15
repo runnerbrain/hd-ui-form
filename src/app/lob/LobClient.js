@@ -44,7 +44,7 @@ export default function LineOfBusiness() {
     'Pathology',
     'MRI-Backup',
     'Other'],
-  Staff: ['PACS','Cerner', 'Pathology','Other']
+  Staff: ['PACS','Cerner','FFI','Pathology','Other']
 }
 
 const lineOfBusinessOptions = lobOptionsByRole[role] || ['no Category selected'];

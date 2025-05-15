@@ -121,10 +121,9 @@ export default function srqDetails() {
           {label: 'Other', subform: null}
         ],
         srqFFI: [
-            {label: 'Cannot report error', subform: 'wsDetails'},
-            {label: 'Other', subform: 'ptDetails'},
+            {label: 'Other', subform: 'ptDetails'}
           ],
-          incPathology: [
+        incPathology: [
                 {label: 'Need Account', subform: 'userDetails'},
                 {label: 'Images display issue', subform: 'ptDetails'},
                 {label: 'Other', subform: null}
@@ -133,22 +132,18 @@ export default function srqDetails() {
       }
 
 
-const getOptions = () => {
-    let options;
-  
-    if (role === 'Radiologist') {
-      options = radOptions;
-    } else if (role === 'Technologist') {
-      options = techOptions;
-    } else if (role === 'Staff') {
-      options = staffOptions;
-    } else {
-      options = {};
-    }
-  
-    const key = `${ticketType}${selectedLOB}`; // E.g., "incPACS"
-    return options[key] || [];
-  };
+
+      const roleOptionsMap = {
+        Radiologist: radOptions,
+        Technologist: techOptions,
+        Staff: staffOptions,
+      };
+      
+      const getOptions = () => {
+        const options = roleOptionsMap[role] || {};
+        const key = `${ticketType}${selectedLOB}`; // e.g., "incPACS"
+        return options[key] || [];
+      };
   
   const handleOptionChange = (e) => {
     const selectedLabel = e.target.value;

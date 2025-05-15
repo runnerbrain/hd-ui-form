@@ -172,14 +172,39 @@ export default function IncDetails() {
           {label: 'Server down', subform: null}],
         incCerner: [
           {label: 'Other', subform: null},
-          ],
+          ]
       }
+
+      const staffOptions = {
+        incPACS: [
+          {label: 'Any', subform: 'ptDetails'}
+        ],
+        incCerner: [
+          {label: 'Any', subform: 'ptDetails'}
+        ],
+        incFFI: [
+          {label: 'Cannot report error', subform: 'wsDetails'},
+          {label: 'Other', subform: null}
+        ],
+        incPathology: [
+          {label: 'Any', subform: 'ptDetails'}
+        ],
+        incOther: [
+          {label: 'Any', subform: null}
+        ]
       }
+      
     
 
+  const roleOptionsMap = {
+    Radiologist: radOptions,
+    Technologist: techOptions,
+    Staff: staffOptions,
+  };
+  
   const getOptions = () => {
-    const options = role === 'Radiologist' ? radOptions : techOptions;
-    const key = `${ticketType}${selectedLOB}`; // E.g., "incPACS"
+    const options = roleOptionsMap[role] || {};
+    const key = `${ticketType}${selectedLOB}`; // e.g., "incPACS"
     return options[key] || [];
   };
 
