@@ -562,20 +562,24 @@ export default function IncDetails() {
       );
     }
     
+    // const labelMap = {
+    //   ptDetails: 'patient details',
+    //   modalityDetails: 'modality info',
+    //   wsDetails: 'workstation details',
+    //   userDetails: 'user account details',
+    // };
   
-    const labelMap = {
-      ptDetails: 'patient details',
-      modalityDetails: 'modality info',
-      wsDetails: 'workstation details',
-      userDetails: 'user account details',
-    };
-  
+
     return (
+
+      
+    
       <div>
         <div className={commonStyles.formRow}>
           <label className={commonStyles.label}>
             <input type="checkbox" />
-            Provide {labelMap[selectedSubform] || 'additional details'}
+            {/* Provide {labelMap[selectedSubform] || 'additional details'} */}
+            addition details TEST
           </label>
         </div>
         {/* Comments Section */}
@@ -591,7 +595,7 @@ export default function IncDetails() {
         </div>
       </div>
     );
-  };
+  }; //end of renderSubForm
 
   
   return (
